@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Create sample file with just timestamp
-        run: date +%s >> report_timestamp.txt
+        run: date +"%d/%m/%Y %H:%M:%S" >> report_timestamp.txt
       - name: Commit file
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
